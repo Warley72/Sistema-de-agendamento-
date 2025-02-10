@@ -1,0 +1,16 @@
+{
+    "explorer.compactFolders": false,
+    "terminal.integrated.fontSize": 14,
+    "editor.lineHeight": 1.8,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderLineHighlight": "gutter",
+    "workbench.editor.labelFormat": "short",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+}
