@@ -1,7 +1,11 @@
+"use client";
+
+import ButtonsEmployees from "./components/ui/buttonsEmployees/ButtonsEmployees";
+
 export default function Page() {
   return (
     <div>
-      <h1>hello page!</h1>
+      <ButtonsEmployees />
     </div>
   );
 }
