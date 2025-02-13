@@ -17,13 +17,14 @@ export default function Form() {
           <Input type="text" placeholder="Nome" />
         </InputContainer>
         <InputContainer>
-          <Input type="email" placeholder="Email" />
+          <Input type="tel" placeholder="Numero de celular" />
         </InputContainer>
         <InputContainer>
-          <Input type="password" placeholder="Senha" />
-        </InputContainer>
-        <InputContainer>
-          <Input type="password" placeholder="Senha" />
+          <select>
+            <option value="servico1">Qual serviço?</option>
+            <option value="servico2">Serviço 2</option>
+            <option value="servico3">Serviço 3</option>
+          </select>
         </InputContainer>
 
         <ButtonStyle type="submit">Confirmar</ButtonStyle>

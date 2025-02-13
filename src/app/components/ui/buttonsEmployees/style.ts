@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { breakpoints } from "@/styles/theme";
+import Link from "next/link";
 
 export const ButtonsContainer = styled.div`
   flex: 1;
@@ -8,13 +10,21 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   gap: 20px;
 
-  width: 100%;
   min-height: 100vh;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: 0px 20px;
+  }
+`;
+export const LinkStyle = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 420px;
+  height: 75px;
 `;
 export const EmployeesContainer = styled.div`
   color: #805151;
   background: linear-gradient(to right, #e5c8c7, #ffaeb2);
-  padding: 15px 120px;
   border-radius: 50px;
   font-family: ${(props) => props.theme.fonts.regular};
   cursor: pointer;
@@ -28,9 +38,21 @@ export const EmployeesContainer = styled.div`
   }
 `;
 export const StyleTitle = styled.h1`
-  font-size: clamp(18px, 4vw, 26px);
+  margin-top: 15px;
+  font-size: 20px;
   text-align: center;
 `;
 export const StyleText = styled.p`
   font-size: 18px;
+  font-weight: 500;
+  font-family: ${(props) => props.theme.fonts.regular};
+  padding-bottom: 10px;
+  padding-left: 115px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-left: 80px;
+  }
+  @media (max-width: ${breakpoints.mobileP}) {
+    padding-left: 40px;
+  }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "@/styles/theme";
 
 export const FormContainer = styled.div`
   flex: 1;
@@ -7,8 +8,10 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 100%;
   height: 100vh;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 0px 20px;
+  }
 `;
 export const FormWrapper = styled.div`
   display: flex;
@@ -19,7 +22,7 @@ export const FormWrapper = styled.div`
 
   background: linear-gradient(to right, #e5c8c7, #ffaeb2);
   color: #805151;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid #ffaeb2;
   width: 100%;
   max-width: 420px;
@@ -52,6 +55,7 @@ export const Input = styled.input`
   border: none;
   text-decoration: none;
   outline: none;
+  background-color: #fff3fd;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   &::placeholder {
