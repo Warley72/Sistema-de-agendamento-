@@ -3,9 +3,11 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { DateSelectArg } from "@fullcalendar/core";
+import ptLocale from "@fullcalendar/core/locales/pt-br";
 
 import { useState } from "react";
 import Link from "next/link";
+
 import {
   CalendarContainer,
   CalendarWrapper,
@@ -18,6 +20,7 @@ import {
   ButtonStyle,
   ButtonsContainerModal,
 } from "./style";
+
 export default function Calendar() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
@@ -26,6 +29,7 @@ export default function Calendar() {
     setSelectedDate(info.startStr);
     setIsModalOpen(true);
   };
+
   return (
     <CalendarContainer>
       <CalendarWrapper>
@@ -35,11 +39,6 @@ export default function Calendar() {
               <TitleStyle>Data Selecionada: {selectedDate}</TitleStyle>
               <TextStyle>Escolha um horário para agendar:</TextStyle>
               <DadeContainer>
-                <h1>8:00</h1>
-                <h1>8:00</h1>
-                <h1>8:00</h1>
-                <h1>8:00</h1>
-                <h1>8:00</h1>
                 <h1>8:00</h1>
                 <h1>8:00</h1>
                 <h1>8:00</h1>
@@ -61,15 +60,17 @@ export default function Calendar() {
           </ModalOverlay>
         )}
         <FullCalendar
+          selectable={true}
           plugins={[dayGridPlugin, interactionPlugin]}
           initialView="dayGridMonth"
-          selectable={true}
           select={handleDateSelect}
+          locale={ptLocale}
           headerToolbar={{
             start: "",
             center: "title",
-            end: "prev,next today",
+            end: "",
           }}
+          dayHeaderContent={(args) => args.text.charAt(0)}
         />
       </CalendarWrapper>
     </CalendarContainer>

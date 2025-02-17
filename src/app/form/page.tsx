@@ -17,16 +17,15 @@ export default function Form() {
           <Input type="text" placeholder="Nome" />
         </InputContainer>
         <InputContainer>
-          <Input type="tel" placeholder="Numero de celular" />
+          <Input type="text" placeholder="Dia" />
         </InputContainer>
         <InputContainer>
-          <select>
-            <option value="servico1">Qual serviço?</option>
-            <option value="servico2">Serviço 2</option>
-            <option value="servico3">Serviço 3</option>
-          </select>
+          <Input type="text" placeholder="Hora" />
         </InputContainer>
-
+        <InputContainer>
+          <Input type="tel" placeholder="Numero Whatsapp" />
+        </InputContainer>
+        
         <ButtonStyle type="submit">Confirmar</ButtonStyle>
       </FormWrapper>
     </FormContainer>

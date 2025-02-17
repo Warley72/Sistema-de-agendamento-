@@ -18,16 +18,65 @@ export const DadeContainer = styled.div`
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-
-  border: 1px solid black;
 `;
 export const CalendarWrapper = styled.div`
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
   height: 100%;
-  max-height: 805px;
-  background-color: aliceblue;
+  max-height: 850px;
+  background: linear-gradient(to right, #e5c8c7, #ffaeb2);
+  border: 2px solid #ffaeb2;
+  border-radius: 10px;
+
+  .fc-toolbar-title {
+    margin-top: 15px;
+    color: #805151;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .fc-col-header-cell {
+    color: #805151;
+    font-size: 20px;
+    border: none;
+    font-family: ${(props) => props.theme.fonts.regular};
+    text-transform: uppercase;
+  }
+  .fc-daygrid-day {
+    border: none;
+    padding: 5px;
+  }
+  .fc-scrollgrid {
+    border: none;
+    cursor: pointer;
+  }
+  .fc-day-today {
+    border-radius: 15px;
+  }
+  .fc .fc-daygrid-day.fc-day-today {
+    border: 5px solid transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(90deg, #e17a7e, #87605f);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .fc-daygrid-day-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3fd;
+    color: #805151;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: rgb(253, 203, 207);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    }
+  }
 `;
 export const ModalOverlay = styled.div`
   position: fixed;
